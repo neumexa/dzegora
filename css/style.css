@@ -1,0 +1,251 @@
+ body {background-color: #FFF5EE }
+#logo
+
+{
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 500px;
+    margin-left: 40%;
+    margin-right: 100%;
+    border-bottom: 1px black solid;
+}
+.wrapper {
+	height: 350px;
+	margin: 50px auto 0;
+	position: relative;
+	width: 900px;
+}
+
+.slider {
+	height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+}
+
+.slides {
+	height: inherit;
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	z-index: 0;
+	transform: perspective(1);
+	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+}
+
+.slide1 { background-image: url(2.png);background-size: contain; background-position: center; background-repeat: no-repeat }
+.slide2 { background-image: url(1.png);background-size: contain; background-position: center; background-repeat: no-repeat }
+.slide3 { background-image: url(3.png);background-size: contain; background-position: center; background-repeat: no-repeat }
+.slide4 { background-image: url(4.png);background-size: contain; background-position: center; background-repeat: no-repeat }
+.slide5 { background-image: url(5.png);background-size: contain; background-position: center; background-repeat: no-repeat }
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4,
+#slide5:checked ~ .slider > .slide5 {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+
+.wrapper > input {
+	display: none;
+}
+
+.wrapper .controls {
+	left: 50%;
+	margin-left: -98px;
+	position: absolute;
+}
+
+.wrapper label {
+	cursor: pointer;
+	display: inline-block;
+	height: 8px;
+	margin: 25px 12px 0 16px;
+	position: relative;
+	width: 8px;
+	border-radius: 50%;
+	transition: background ease-in-out .5s;
+}
+
+.wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+	background: #ddd;
+}
+
+.wrapper label:after {
+	border: 2px solid #ddd;
+	content: " ";
+	display: block;
+	height: 12px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 12px;
+}
+.txt
+{
+    font-family: sans-serif;
+    margin-left: 473px;
+    font-size: 3em;
+    color: gray;
+}
+#akcii
+{
+    background-image: url(akcii.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game
+{
+    width: 600px;
+    height: 200px;
+    border: 3px inset #4CAF50;
+    margin: auto;
+    animation-play-state : paused;
+}
+#dino
+{
+    width: 50px;
+    height: 50px;
+    background-image: url(game/dinoz.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+}
+#cactus
+{
+    width: 40px;
+    height: 80px;
+    background-image: url(game/1.png);
+    background-size: 40px 80px;
+    position: relative;
+    top: 70px;
+    left: 560px;
+}
+.strt {
+    animation: cactusMov 1.5s infinite linear;
+}
+@keyframes cactusMov {
+    0% {
+        left: 560px;
+    }
+    100% {
+        left: -5px;
+    }
+}
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 80px;
+    }
+    50% {
+        top: 30px;
+    }
+    80% {
+        top: 80px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+#starttt{
+    margin-left: 810px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+#score{
+    margin-left: 1070px;
+    margin-right: 650;
+    width: 145;
+    display: flex;
+    flex-direction: row;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+#rate {
+    background-image: url(rate.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer{
+    margin-top: 100px;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    height: 100px;
+    width: 55%;
+    padding: 0;
+    display: flex;
+     flex-direction: row;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.social a {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15), inset 0 0 50px rgba(0,0,0,0.1);
+    border-radius: 24px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+    font-size: 125% !important;
+}
+.vk a:hover {background: #5d84ae; color: #fff;}
+.whatsapp a:hover {background: #50b154; color: #fff;}
+.odnoklassniki a:hover {background: #f93; color: #fff;}
+.telegram a:hover {background: #249bd7; color: #fff;}
+.twitter a:hover {background: #00acee; color: #fff;}
+.cont{
+    font-family: DejaVu Sans Mono, monospace;
+    font-size: 26px;
+    margin-left: 40px;
+}
+#num{
+    color: gray;
+}
+.adress{
+    margin-left: 40px;
+}
